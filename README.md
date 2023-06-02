@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](https://github.com/Web-dev-rafik/social-proof-section/blob/main/screenshot.png)
 
 ### Links
 
