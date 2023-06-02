@@ -1,0 +1,274 @@
+/* Reset */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Colors */
+
+:root {
+  /* Primary */
+
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+
+  /* Neutral */
+
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Typography */
+
+body {
+  font-family: "League Spartan", sans-serif;
+  line-height: 1.5;
+  font-size: 100%; /* 16px by default */
+}
+
+:root {
+  --fs: 0.9375rem; /* 15 px */
+  --fs-h1: 2.5rem;
+}
+
+p {
+  font-size: var(--fs);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Desktop : 1120px */
+
+@media (min-width: 70em) {
+  :root {
+    --fs: 1.125rem; /* 18 px */
+    --fs-h1: 3.5rem;
+  }
+}
+
+/* Main background */
+
+body {
+  background: url("./images/bg-pattern-top-mobile.svg") no-repeat,
+    url("./images/bg-pattern-bottom-mobile.svg") no-repeat;
+}
+
+/* Main */
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 4rem 1rem;
+}
+
+/* Hero */
+
+.hero {
+  text-align: center;
+}
+
+.hero-title {
+  color: var(--Very-Dark-Magenta);
+}
+
+.hero-description {
+  color: var(--Dark-Grayish-Magenta);
+  margin-top: 1.25rem;
+  font-weight: 500;
+}
+
+/* Ratings */
+
+.ratings {
+  margin-top: 2rem;
+}
+
+.ratings-item {
+  background-color: var(--Light-Grayish-Magenta);
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+}
+
+.ratings-item:first-child {
+  margin-top: 0;
+}
+
+.ratings-stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.ratings-text {
+  text-align: center;
+  margin-top: 0.5rem;
+  color: var(--Very-Dark-Magenta);
+  font-weight: 700;
+}
+
+/* Testimonials */
+
+.testimonials {
+  margin-top: 2rem;
+}
+
+.testimonials-item {
+  background-color: var(--Very-Dark-Magenta);
+  color: var(--white);
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  padding: 2rem 1.25rem;
+}
+
+.testimonials-item:first-child {
+  margin-top: 0;
+}
+
+.testimonials-infos {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonials-img {
+  border-radius: 50%;
+}
+
+.testimonials-person {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonials-name {
+  font-weight: 700;
+}
+
+.testimonials-verified {
+  color: var(--Soft-Pink);
+}
+
+.testimonials-text {
+  margin-top: 1rem;
+}
+
+/* Media queries */
+
+/* Desktop : 1120px */
+
+@media (min-width: 70em) {
+  /* Background */
+  body {
+    background: url("./images/bg-pattern-top-desktop.svg") no-repeat,
+      url("./images/bg-pattern-bottom-desktop.svg") no-repeat right bottom;
+  }
+  /* Grid */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main {
+    grid-template-columns: 1fr 1fr;
+  }
+  .testimonials {
+    grid-column: 1 / 3;
+  }
+  /* Main */
+  .main {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+  /* Hero */
+  .hero {
+    text-align: left;
+    margin-right: 4rem;
+  }
+
+  /* Ratings */
+  .ratings-item {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.75rem 2rem 0.75rem 0;
+  }
+
+  .ratings-item-2 {
+    margin-left: 10%;
+  }
+  .ratings-item-3 {
+    margin-left: 20%;
+  }
+
+  /* Testimonials */
+  .testimonials {
+    margin-top: 5rem;
+  }
+  .testimonials-list {
+    display: flex;
+    gap: 2rem;
+  }
+  .testimonials-item {
+    height: fit-content;
+  }
+  .testimonials-item-2 {
+    margin-top: 2%;
+  }
+  .testimonials-item-3 {
+    margin-top: 4%;
+  }
+
+  /* Attribution */
+  .attribution {
+    display: block;
+  }
+}
+
+/* Attribution Styles */
+.attribution {
+  display: none;
+  color: white;
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
